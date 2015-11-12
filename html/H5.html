@@ -1,186 +1,268 @@
 <!DOCTYPE html>
 <html lang="zh-CN"> <!-- // 语言 -->
-  <head>
-    <meta charset="utf-8">   <!-- //编码格式 -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">  <!-- //兼容性的玩意 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">  
-    <!-- //自适应窗口及初始缩放比例 -->
-    
-    <!-- //网站title -->
-    <title> hello Bootstrap </title>
+<head>
+  <meta charset="utf-8">   <!-- //编码格式 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">  <!-- //兼容性的玩意 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <!-- //自适应窗口及初始缩放比例 -->
+  <!-- //网站title -->
+  <title> hello Bootstrap </title>
+  <!-- //使用框架中的css -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+  body { padding-top: 50px; 
+   padding-bottom: 30px;}
+   /*//滚动视图内的样式设置*/
+   .carousel {
+     background-color: #000;
+     height: 400px;
+     margin-bottom: 50px;
+   }
+   .carousel .item {
+    height: 400px;
+    background-color: #000;
 
-    <!-- //使用框架中的css -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-  </head>
-      <style>
-          body { padding-top: 50px; }
-          /*//滚动视图内的样式设置*/
-          .carousel {
-                     background-color: #000;
-                     height: 400px;
-                     margin-bottom: 50px;
-                    }
-          .carousel .item {
-                          height: 400px;
-                          background-color: #000;
+  }
+  .carousel img{
 
-                    }
-          .carousel img{
+    width: 100%;
 
-                          width: 100%;
+  }
+  .carousel-caption p{
 
-          }
-          .carousel-caption p{
 
-                          
-                          font-size: 18px;
-                          line-height: 1.7;
-                          margin-bottom: 22px;
-          }
-          /*//三栏结构视图内的样式设置*/
-          #summary-div{
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+  /*//三栏结构视图内的样式设置*/
+  #summary-div{
 
-            text-align: center;
-            font-size: 22px;
-            color: gray;
-          }
-          #summary-div img{
+    text-align: center;
+    font-size: 22px;
+    color: gray;
+  }
+  #summary-div img{
 
-            width: 100%;
-            height: 250px;
-          }
+    width: 100%;
+    height: 250px;
+  }
+  #summary-div a{
+    font-size: 18px;
+  }
 
-      </style>
+  .cool-div h2{
 
-  <body>
-  
+    color: #5EBAC3;
+    font-size:50px;
+    padding-top: 20px;
+  }
+  .cool-div span{
+    color: #676774;
+    font-size: 28px;
+  }
+  .cool-div 
+  {
+    padding: 50px 0;
+
+  }
+  .cool-div img
+  {
+    height: 300px;
+  }
+</style>
+<body>
   <!-- 导航栏 -->
   <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-  </nav>
-  <!-- 轮播广告界面 -->
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      
-      <!-- //轮播视图底部控件 -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <!-- 轮播视图中部视图 -->
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img class="first-slide" src="../images/first.jpg" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#cool-nav" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Brand</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="cool-nav">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+
+            <ul class="dropdown-menu">
+              <li><a href="#Home">Home</a></li>
+              <li><a href="#Profile">Profile</a></li>
+              <li><a href="#Messages">Messages</a></li>
+              
+            </ul>
+          </li>
+          <li><a href="#" data-toggle = "modal" data-target = "#myModal">关于</a></li>
+        </ul>
+      </nav>
+      <!-- 轮播广告界面 -->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <!-- //轮播视图底部控件 -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- 轮播视图中部视图 -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img class="first-slide" src="../images/first.jpg" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Example headline.</h1>
+                <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img class="second-slide" src="../images/second.jpg" alt="Second slide">
+            <div class="container">
+              <div class="carousel-caption" style="backg">
+                <h1>Another example headline.</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img class="third-slide" src="../images/third.jpg" alt="Third slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>One more for good measure.</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="item">
-          <img class="second-slide" src="../images/second.jpg" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption" style="backg">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+        <!-- //轮播视图左右切换按钮 -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div><!-- /.carousel -->
+      <!-- //三栏结构 -->
+      <div class="container" id = "summary-div">
+        <div class="row">
+          <div class="col-md-4">
+            <img  class="img-circle" src="../images/first-icon.jpg" alt="first-icon">
+            <h2>first</h2>
+            <p>lalallalalalallalalalalalallaa</p>
+            <p><a class = "btn btn-default" href="#" role = "button"> press </a></p>
+          </div>
+          <div class="col-md-4">
+            <img  class="img-circle" src="../images/second-icon.jpg" alt="second-icon">
+            <h2>second</h2>
+            <p>lalallalalalallalalalalalallaa</p>
+            <p><a class = "btn btn-default" href="#" role = "button"> press </a></p>
+          </div>
+          <div class="col-md-4">
+            <img  class="img-circle" src="../images/third-icon.jpg" alt="third-icon">
+            <h2>third</h2>
+            <p>lalallalalalallalalalalalallaa</p>
+            <p><a class = "btn btn-default" href="#" role = "button"> press </a></p>
+          </div>
+        </div>
+        <hr>
+        <!-- //标签页 -->
+        <ul class="nav nav-tabs" role = "tablist" id="cool-tab">
+          <li role="presentation" class="active"><a href="#Home" role = "tab" data-toggle = "tab">Home</a></li>
+          <li role="presentation"><a href="#Profile" role = "tab" data-toggle = "tab">Profile</a></li>
+          <li role="presentation"><a href="#Messages" role = "tab" data-toggle = "tab">Messages</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active"  id="Home">
+            <div class="row cool-div">
+              <div class="col-md-5">
+                <img class="feature-image img-responsive" src="../images/icon-one.png" alt="one">
+              </div>
+              <div class="col-md-7"> 
+                <h2 class="feature-heading">first pic<span class="text-muted">first</span></h2>
+                <p class="lead">当鼠标悬停在缩写和缩写词上时就会显示完整内容，Bootstrap 实现了对 HTML 的 <abbr> 元素的增强样式。缩略语元素带有 title 属性，外观表现为带有较浅的虚线框，鼠标移至上面时会变成带有“问号”的指针。如想看完整的内容可把鼠标悬停在缩略语上（对使用辅助技术的用户也可见）, 但需要包含 title 属性。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane"  id="Profile">
+            <div class="row cool-div">
+              <div class="col-md-5">
+                <h2 class="feature-heading">first pic<span class="text-muted">first</span></h2>
+                <p class="lead">当鼠标悬停在缩写和缩写词上时就会显示完整内容，Bootstrap 实现了对 HTML 的 <abbr> 元素的增强样式。缩略语元素带有 title 属性，外观表现为带有较浅的虚线框，鼠标移至上面时会变成带有“问号”的指针。如想看完整的内容可把鼠标悬停在缩略语上（对使用辅助技术的用户也可见）, 但需要包含 title 属性。</p>
+              </div>
+              <div class="col-md-7">
+                <img src="../images/icon-two.jpg" alt="two">
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane"  id="Messages">
+            <div class="row cool-div">
+              <div class="col-md-5">
+                <img src="../images/icon-three.jpg" alt="three">
+              </div>
+              <div class="col-md-7">
+                <h2 class="feature-heading">first pic<span class="text-muted">first</span></h2>
+                <p class="lead">当鼠标悬停在缩写和缩写词上时就会显示完整内容，Bootstrap 实现了对 HTML 的 <abbr> 元素的增强样式。缩略语元素带有 title 属性，外观表现为带有较浅的虚线框，鼠标移至上面时会变成带有“问号”的指针。如想看完整的内容可把鼠标悬停在缩略语上（对使用辅助技术的用户也可见）, 但需要包含 title 属性。</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="item">
-          <img class="third-slide" src="../images/third.jpg" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+          <!-- //底部视图 -->
+        <hr>
+        <footer>
+          <p class= "pull-right"><a href="#top">回到首页</a></p>
+          <p class= "pull-left"> first page - by cool</p>
+        </footer>
+      </div>
+      <!-- //弹出视图框 -->
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">关于</h4>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- //轮播视图左右切换按钮 -->
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-  </div><!-- /.carousel -->
-  <!-- //三栏结构 -->
-  <div class="container" id = "summary-div">
-    <div class="row">
-      <div class="col-md-4">
-        <img  class="img-circle" src="../images/first-icon.jpg" alt="first-icon">
-        <h2>first</h2>
-        <p>lalallalalalallalalalalalallaa</p>
-        <p><a class = "btn btn-default" href="#" role = "button"> press </a></p>
-      </div>
-      <div class="col-md-4">
-        <img  class="img-circle" src="../images/second-icon.jpg" alt="second-icon">
-        <h2>second</h2>
-        <p>lalallalalalallalalalalalallaa</p>
-        <p><a class = "btn btn-default" href="#" role = "button"> press </a></p>
-      </div>
-      <div class="col-md-4">
-        <img  class="img-circle" src="../images/third-icon.jpg" alt="third-icon">
-        <h2>third</h2>
-        <p>lalallalalalallalalalalalallaa</p>
-        <p><a class = "btn btn-default" href="#" role = "button"> press </a></p>
-      </div>
-    </div>
-    <hr>
-  <!-- //标签页 -->
-    <ul class="nav nav-tabs" role = "tablist">
-      <li role="presentation" class="active"><a href="#Home" role = "tab" data-toggle = "tab">Home</a></li>
-      <li role="presentation"><a href="#Profile" role = "tab" data-toggle = "tab">Profile</a></li>
-      <li role="presentation"><a href="#Messages" role = "tab" data-toggle = "tab">Messages</a></li>
-    </ul>
-    <div class="tab-content">
-      <div class="tab-pane active"  id="Home">
-        <img class="feature-image img-responsive" src="../images/icon-one.png" alt="one">
-      </div>
-      <div class="tab-pane"  id="Profile">
-        <img src="../images/icon-two.jpg" alt="two">
-      </div>
-      <div class="tab-pane"  id="Messages">
-        <img src="../images/icon-three.jpg" alt="three">
-      </div>
-    </div>
-  </div>
-  
-  </body>
-  <!-- //使用框架中的js.由于该框架是基于jQ的，所以也需要引用jq. -->
+            <div class="modal-body">
+              <p>不支持同时打开多个模态框
+                千万不要在一个模态框上重叠另一个模态框。要想同时支持多个模态框，需要自己写额外的代码来实现。
+                模态框的 HTML 代码放置的位置
+                务必将模态框的 HTML 代码放在文档的最高层级内（也就是说，尽量作为 body 标签的直接子元素），以避免其他组件影响模态框的展现和/或功能。
+                对于移动设备的附加说明
+                这里提供了在移动设备上使用模态框有一些附加说明。请参考浏览器支持章节。</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">好的</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+    </body>
+    <!-- //使用框架中的js.由于该框架是基于jQ的，所以也需要引用jq. -->
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-</html>
+    <script>
+    $(document).ready(function () {
+      
+      $("#cool-nav .dropdown-menu a").click(function () {
+          
+          var href = $(this).attr("href");
+          $("#cool-tab a[href = '"+ href +"']").tab("show");
+
+      });
+    });
+    </script>
+    </html>
